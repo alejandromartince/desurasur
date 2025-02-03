@@ -1,0 +1,243 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variable para elegir colores */
+:root {
+    --beige: rgb(216, 186, 145);
+    --colorfondo: #c0ad8cab;
+    --blanco: rgb(255, 255, 255);
+    --beigeclaro: rgba(198, 176, 143);
+    --marrontitulo: rgb(139, 69, 19);
+}
+
+header{
+    z-index: 99999;
+}
+
+/*Seccion del contenido del video */
+.seccionVideo__contenido {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -113;
+}
+
+/*Video de fondo*/
+.video-fondo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+/*Titulo que está en la seccion del video */
+.seccionVideo__titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    z-index: -1;
+}
+
+/* Seccion del carrousel */
+.seccionFotos__Carrusel {
+    position: relative; /* Necesario para que el z-index funcione */
+    text-align: center;
+    padding: 2rem 0;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+/* Titulo "Novedades" */
+.tituloCarrousel {
+    position: relative;
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    z-index: -1;
+}
+
+/* Div que contiene las imagenes */
+.seccionImagenes__contenedor {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Permite que las imágenes se ajusten */
+    justify-content: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Imagenes del carrousel */
+.CanastasY_bolsos {
+    width: 17rem; /* Establece el ancho de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    display: block; /* Asegúrate de que las imágenes se muestren correctamente */
+    transition: transform 0.4s ease; /* Suaviza la transición del zoom */
+}
+
+.CanastasY_bolsos:hover {
+    transform: scale(1.15); /* Aumenta el tamaño de la imagen al pasar el cursor */
+}
+
+
+/* Botones del carrousel */
+.carousel-boton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2; /* Para que los botones estén sobre las imágenes */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*Boton izquierdo del carrousel */
+#prevBoton {
+    left: 5rem;
+    /* Posiciona el botón anterior a la izquierda */
+}
+
+/* Boton derecho del carrousel */
+#nextBoton {
+    right: 5rem;
+    /* Posiciona el botón siguiente a la derecha */
+}
+
+/* Div de la seccion de las dos imagenes en grande */
+.imagen-grid {
+    display: grid; /* Usar Grid para organizar los elementos */
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    height: fit-content; /* Este valor es opcional; el comportamiento predeterminado es auto */
+}
+
+/* Imagenes de mimbre y croche */
+.detalleCanasta,
+.detalleCanasta2 {
+    object-fit: cover; /* Mantiene la proporción de las imágenes */
+    height: 40rem; /* Aumenta la altura a 30rem (ajusta según necesites) */
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho */
+    margin: auto; /* Centra las imágenes en su celda */
+}
+
+.imagen-con-enlace {
+    position: relative; /* Necesario para que el enlace se posicione dentro de este contenedor */
+    overflow: hidden; /* Asegúrate de que el contenido no se desborde */
+    height: 40rem; /* Establece una altura específica para las imágenes */
+}
+
+.enlace-saber-mas {
+    position: absolute; /* Posición absoluta dentro del contenedor */
+    bottom: 10px; /* Ajusta la posición desde el fondo */
+    left: 10px; /* Ajusta la posición desde la izquierda */
+    padding: 0.5rem 1rem; /* Espaciado alrededor del texto */
+    border-radius: 5px; /* Esquinas redondeadas */
+    text-decoration: none; /* Elimina el subrayado */
+    color: rgb(255, 255, 255); /* Color del texto */
+    transition: background-color 0.3s; /* Suaviza el cambio de fondo */
+    font-size: larger;
+}
+
+.enlace-saber-mas:hover {
+    color: var(--beigeclaro);
+}
+
+/* Seccion de inspiracion */
+.inspiracion {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr; /* Agrega una fila para el h1 */
+    gap: 1rem; /* Espacio entre las columnas */
+}
+
+.inspiracion h1 {
+    margin-top: 3rem;
+    grid-column: 1 / -1; /* Hace que el h1 ocupe todas las columnas */
+    grid-row: 1; /* Coloca el h1 en la primera fila */
+    text-align: center; /* Centra el texto del h1 */
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente según prefieras */
+    margin-bottom: 1rem; /* Añade un margen inferior si deseas separar más el título de las imágenes */
+}
+
+.BolsitoCroche {
+    grid-column: 1;
+    grid-row: 2; /* Coloca la imagen en la segunda fila */
+}
+
+.Modelo1 {
+    grid-column: 2;
+    grid-row: 2; /* Coloca la imagen en la segunda fila */
+}
+
+.CanastaPlantas {
+    grid-column: 3;
+    grid-row: 2; /* Coloca la imagen en la segunda fila */
+}
+
+.BolsitoCroche,
+.CanastaPlantas,
+.Modelo1 {
+    height: auto; 
+    width: 100%; 
+    object-fit: cover; 
+}
+
+/*Boton de arriba */
+.boton_arriba{
+    border: none;
+    color: black;
+    background-color:transparent;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.boton_arriba:hover {
+    background-color: var(--beige); 
+    color: white;
+}
+
+
+@media (max-width: 1250px) {
+    /*Imagenes del carrousel */
+    .CanastasY_bolsos {
+        width: 100%;
+        /* Imágenes ocuparán el 100% del contenedor */
+    }
+
+    .seccionImagenes__contenedor {
+        flex-wrap: nowrap;
+        /* Permite que las imágenes se ajusten */
+        justify-content: center;
+        /* Distribuye el espacio entre imágenes */
+        left: 50%;
+        padding: 0 2rem 0 2rem;
+    }
+
+    #prevBoton {
+        left: 1rem;
+        /* Posiciona el botón anterior a la izquierda */
+    }
+
+    /* Boton derecho del carrousel */
+    #nextBoton {
+        right: 1rem;
+        /* Posiciona el botón siguiente a la derecha */
+    }
+}

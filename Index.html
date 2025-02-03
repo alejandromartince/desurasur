@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ana" />
+    <meta name="keywords" content="bolsos, hechos a manos, casero, materiales, decoración, playa, complementos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | DE SUR A SUR | España</title>
+    <link rel="icon" type="image/x-icon" href="./Imgs/logotipos_web_negro.png" />
+
+    <!-- Enlace a tus archivos CSS -->
+    <link rel="stylesheet" href="./Index.css">
+
+    <!-- Links para los archivos JS -->
+    <script src="./BarraNavegacionVertical.js"></script>
+    <script src="./IncluirHeader.js"></script>
+    <script src="./IncluirFooter.js"></script>
+    <script src="./Carrousel.js"></script>
+    <script src="./ScrollArriba.js"></script>
+
+    <!-- Añadimos el link para los iconos -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Seccion del header -->
+    <header>
+        <div id="header-container"></div>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <section class="seccionVideo__contenido">
+            <video muted loop autoplay class="video-fondo" playsinline>
+                <source src="./Videos/video_completo.MP4" type="video/mp4">
+                <p>Lo sentimos, tu navegador no soporta la reproducción de este video.</p>
+            </video>
+            <h1 class="seccionVideo__titulo">Hecho a mano</h1>
+        </section>
+
+        <!-- Sección del carrusel -->
+        <section class="seccionFotos__Carrusel">
+            <h1 class="tituloCarrousel">Novedades</h1>
+
+            <!-- Icono de flecha izquierda -->
+            <button id="prevBoton" class="carousel-boton">
+                <i class="fa-solid fa-chevron-left fa-2xl"></i>
+            </button>
+
+            <div class="seccionImagenes__contenedor">
+                <a href="./Canastas.html" target="_blank">
+                    <img src="./Imgs/canastas_carrusel_1.png" alt="Canasta Blanca XL blanca y croche"
+                        class="CanastasY_bolsos">
+                </a>
+                <a href="./Canastas.html" target="_blank">
+                    <img src="../Imgs/canastas_carrusel_2.png" alt="Canasta Blanca XL blanca"
+                        class="CanastasY_bolsos">
+                </a>
+                <a href="./Canastas.html" target="_blank">
+                    <img src="../Imgs/canastas_carrusel_3.png"
+                        alt="Canasta cuadrada niña decoración turquesa y rosa" class="CanastasY_bolsos">
+                </a>
+                <a href="./Canastas.html" target="_blank">
+                    <img src="../Imgs/canastas_carrusel_4.png" alt="Canasta Azul XL" class="CanastasY_bolsos">
+                </a>
+                <a href="./Canastas.html" target="_blank">
+                    <img src="../Imgs/canastas_carrusel_5.png" alt="Canasta redonda cordon largo croche"
+                        class="CanastasY_bolsos">
+                </a>
+                <a href="./Canastas.html" target="_blank">
+                    <img src="../Imgs/canastas_carrusel_6.png" alt="Canasta cuadrada niña decoración beige"
+                        class="CanastasY_bolsos">
+                </a>
+                <a href="./Canastas.html" target="_blank">
+                    <img src="../Imgs/canastas_carrusel_7.png" alt="Canasta redondita mimbre mitad blanca"
+                        class="CanastasY_bolsos">
+                </a>
+            </div>
+
+            <!-- Icono de flecha derecha -->
+            <button id="nextBoton" class="carousel-boton">
+                <i class="fa-solid fa-chevron-right fa-2xl"></i>
+            </button>
+        </section>
+
+        <!-- Sección de materiales -->
+        <section>
+            <div class="imagen-grid">
+                <div class="imagen-con-enlace">
+                    <picture>
+                        <source src="./Imgs/croche2.jpg" type="image/jpeg">
+                        <img src="./Imgs/croche1.jpg" alt="Detalle canasta" class="detalleCanasta2">
+                    </picture>
+                    <a href="./Nosotros.html" class="enlace-saber-mas" target="_blank">Saber más..</a>
+                </div>
+                <div class="imagen-con-enlace">
+                    <picture>
+                        <source src="./Imgs/canastaDetalle2.jpg" type="image/jpeg">
+                        <img src="./Imgs/canastaDetalle2.jpg" alt="Detalle material de la canasta"
+                            class="detalleCanasta">
+                    </picture>
+                    <a href="./Nosotros.html" class="enlace-saber-mas" target="_blank">Saber más..</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="inspiracion">
+            <h1>Para más inspiración..</h1>
+            <source src="./Imgs/BolsitoCroche.jpg">
+            <img src="./Imgs/BolsitoCroche.jpg" alt="Bolso croche decoración" class="BolsitoCroche">
+            <source src="./Imgs/modelo1.jpg">
+            <img src="./Imgs/modelo1.jpg" alt="modelo llevando una canasta" class="Modelo1">
+            <source src="./Imgs/fotoCanastaPlantas.jpg">
+            <img src="./Imgs/fotoCanastaPlantas.jpg" alt="Canasta redonda con plantas secas"
+                class="CanastaPlantas">
+        </section>
+
+        <!-- Boton para subir -->
+        <button id="top" class="boton_arriba"> Subir </button>
+
+    </main>
+
+    <!-- Seccion del footer -->
+    <footer>
+        <div id="footer-container"></div>
+    </footer>
+</body>
+
+</html>
