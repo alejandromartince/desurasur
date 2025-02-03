@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Jost;
+    src: url("../fonts/Jost/Jost-VariableFont_wght.ttf");
+}
+
+* {
+    font-family: Jost;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variable para elegir colores */
+:root {
+    --beige: rgb(216, 186, 145);
+    --colorfondo: #c0ad8cab;
+    --blanco: rgb(255, 255, 255);
+    --beigeclaro: rgba(198, 176, 143);
+    --beigeclarosidebar: rgba(198, 176, 143, 0.719);
+    --marrontitulo: rgb(139, 69, 19);
+}
+
+/* Sección de bienvenida */
+.seccionBienvenida {
+    background-color: var(--blanco);
+    color: black;
+    padding: 2rem;
+    text-align: center;
+    width: 95%;
+    margin-top: 2rem;
+}
+
+.seccionBienvenida h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Centra el texto del título */
+}
+
+.seccionBienvenida p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center; /* Centra el texto del párrafo */
+}
+
+
+/*Contenedor del formulario */
+.seccion__formulario {
+    display: flex;
+    justify-content: center;
+}
+
+
+.formulario {
+    background-color: var(--beigeclaro);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 32rem;
+    width: 100%;
+    
+}
+
+.formulario label {
+    font-size: 1rem;
+    color: var(--blanco);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    width: 95%;
+    border: none;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 1rem;
+    color: var(--marrontitulo);
+}
+
+.formulario textarea {
+    resize: none;
+}
+
+.formulario input[type="submit"] {
+    background-color: var(--blanco);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #a08562;
+}

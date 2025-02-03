@@ -1,0 +1,112 @@
+@font-face {
+    font-family: Jost;
+    src: url("../fonts/Jost/Jost-VariableFont_wght.ttf");
+}
+
+* {
+    font-family: Jost;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+/* Variable para elegir colores */
+:root {
+    --beige: rgb(216, 186, 145);
+    --colorfondo: #c0ad8cab;
+    --blanco: rgb(255, 255, 255);
+    --beigeclaro: rgba(198, 176, 143);
+    --marrontitulo: rgb(139, 69, 19);
+}
+
+.seccionTexto__Fotos--Cestas {
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+/* Título Bolsos */
+.titulo__Cestas {
+    color: black; 
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.seccion__fotos--cestas {
+    position: relative; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Contenedor de imagen */
+.imagenContainer {
+    position: relative;
+    background-color: #ffffff; /* Blanco */
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Imágenes de contenedor */
+.imagenContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+/* Imagen secundaria */
+.imagenContainer .hoverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+    height: 88%;
+    padding: 1rem;
+}
+
+.imagenContainer:hover .hoverImage {
+    opacity: 1;
+}
+
+.imagenContainer:hover img:not(.hoverImage) {
+    opacity: 0;
+}
+
+/* Precio de cada imagen */
+.precio {
+    color: var(--marrontitulo); /* Marrón para el texto de precio */
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* Botón de arriba */
+.boton_arriba {
+    border: none;
+    color: black;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+}
+
+.boton_arriba:hover {
+    background-color: var(--beige); 
+    color: white;
+}

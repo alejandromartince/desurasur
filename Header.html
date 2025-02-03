@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Agregamos los CSS -->
+    <link rel="stylesheet" type="text/css" href="./Header.css">
+
+    <!-- Agregamos el archivo de Javascript -->
+    <script src="./BarraNavegacionVertical.js"></script>
+    <!-- Añadimos el link para los iconos -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <!-- Creamos nuestra cabecera -->
+        <div class="Cabecera">
+            <!-- Ponemos el logo a la izquierda -->
+            <a href="../Index.html" class="aLogo">
+                <img src="../Imgs/logotipos_web_blanco.png" class="Logo" alt="Logo">
+            </a>
+            <!-- Creamos la primera barra de navegación que es horizontal -->
+            <nav class="Nav">
+                <ul>
+                    <li class="header__elementoLista"><a href="./Canastas.html" class="header__linkLista"
+                            target="_blank">CANASTAS</a>
+                    </li>
+                    <li class="header__elementoLista"><a href="./BolsosyCestas.html" class="header__linkLista"
+                            target="_blank">BOLSOS Y CESTAS</a></li>
+                    <li class="header__elementoLista"><a href="./Nosotros.html" class="header__linkLista"
+                            target="_blank">NOSOTROS</a>
+                    </li>
+                    <li class="header__elementoLista"><a href="./Contacto.html" class="header__linkLista"
+                            target="_blank">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Icono del menú en la misma línea que la navegación principal -->
+            <ul>
+                <li id="Menu" onclick="showSidebar()">
+                    <a href="#">
+                        <i class="fa-solid fa-bars fa-xl" style="color: #ffffff;"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Barra de navegación vertical -->
+        <div class="Cabecera2">
+            <nav>
+                <ul class="Sidebar">
+                    <li id="CerrarMenu" onclick="closeSidebar()">
+                        <a href="#">
+                            <i class="fa-solid fa-xmark fa-lg" style="color: #ffffff;"></i>
+                        </a>
+                    </li>
+                    <li class="header__elementoLista"><a href="./Canastas.html" class="header__linkLista" target="_blank">CANASTAS</a>
+                    </li>
+                    <li class="header__elementoLista"><a href="./BolsosyCestas.html" class="header__linkLista" target="_blank">BOLSOS</a></li>
+                    <li class="header__elementoLista"><a href="./Nosotros.html" class="header__linkLista" target="_blank">NOSOTROS</a>
+                    </li>
+                    <li class="header__elementoLista"><a href="./Contacto.html" class="header__linkLista" target="_blank">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+
+</html>

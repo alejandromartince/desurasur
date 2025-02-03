@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Jost;
+    src: url("../fonts/Jost/Jost-VariableFont_wght.ttf");
+}
+
+* {
+    font-family: Jost;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variable para elegir colores */
+:root {
+    --beige: rgb(216, 186, 145);
+    --colorfondo: #c0ad8cab;
+    --blanco: rgb(255, 255, 255);
+    --beigeclaro: rgba(198, 176, 143);
+    --beigeclarosidebar: rgba(198, 176, 143, 0.719);
+    --marrontitulo: rgb(139, 69, 19);
+}
+
+/* Cambia el CSS de la clase Nav para que se alinee a la derecha */
+.Cabecera {
+    background-color: var(--beigeclaro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Mantén esto para el logo y el menú */
+    height: 13vh; /* Altura fija para la cabecera */
+    padding: 0 2rem; /* Espacio a los lados */
+}
+
+.Nav {
+    font-size: 1rem;
+    display: flex;
+    transition: height 0.5s;
+    margin-left: auto; /* Esto empuja la navegación hacia la derecha */
+}
+
+/* Asegúrate de que el ul de Nav mantenga la alineación */
+.Nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 4rem; /* Espacio entre los elementos de la navegación */
+}
+
+#Menu {
+    display: block;
+    position: relative;
+    top: 0; /* Ajusta la alineación vertical */
+}
+
+/* Resto del código CSS se mantiene igual */
+
+
+.Nav a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.Nav a:hover {
+    transform: scale(1.1);
+}
+
+.Logo {
+    height: 4rem;
+    width: auto;
+}
+
+.aLogo {
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Estilo para los iconos SVG */
+svg path {
+    fill: white;
+}
+
+/* Segunda barra de navegación */
+.Cabecera2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 15rem;
+    color: white;
+    z-index: 999;
+}
+
+/* Barra de navegación vertical para pantallas pequeñas */
+.Sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 15rem;
+    z-index: 999;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.07);
+    flex-direction: column;
+    justify-content: flex-start;
+    backdrop-filter: blur(20px);
+    background-color: var(--beigeclarosidebar);
+    list-style: none;
+    padding: 0;
+}
+
+.Sidebar ul{
+    display: none;
+}
+
+.Sidebar li {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.Sidebar a {
+    text-decoration: none;
+    color: white;
+}
+
+.Sidebar li:hover {
+    background-color: rgba(134, 134, 134, 0.211);
+}
+
+#CerrarMenu {
+    cursor: pointer;
+}
+
+/* Estilos para el icono de menú */
+#Menu {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    top: 0; /* Ajusta la alineación vertical */
+}
+
+@media (min-width: 768px) {
+    #Menu {
+        display: none;
+    }
+
+    .Cabecera2 {
+        display: none;
+    }
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    #Menu {
+        display: block;
+        position: relative;
+        right: 0;
+    }
+
+    #Menu svg {
+        height: auto;
+        width: 2rem;
+    }
+
+    .Nav {
+        display: none;
+    }
+}

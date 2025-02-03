@@ -1,0 +1,93 @@
+/* Estilo general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Sección principal */
+.seccionBienvenida {
+    padding: 2rem;
+    background-color: white;
+}
+
+/* Contenedor de imagen y texto */
+.seccionComienzoImagen {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.seccionImagenComienzo img {
+    height: 35rem; /* Ajusta la altura de la imagen */
+    width: 100%; /* Para que la imagen se ajuste al contenedor en pantallas pequeñas */
+}
+
+/* Estilo del texto */
+.seccionComienzo {
+    flex: 1;
+    padding-left: 2rem; /* Espacio entre la imagen y el texto */
+}
+
+.seccionComienzo h1,
+.seccionComienzo p {
+    margin: 0;
+}
+
+.seccionComienzo p {
+    margin-top: 0.5rem;
+}
+
+/* Estilo del grid */
+.seccionGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 2rem; /* Espacio entre las columnas */
+    margin-top: 3rem;
+}
+
+.seccionProceso_Canastas,
+.seccionDiseños {
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.seccionProceso_Canastas h1,
+.seccionDiseños h1 {
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.seccionProceso_Canastas p,
+.seccionDiseños p {
+    color: black;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    /* Hacer que la imagen y el texto se apilen en lugar de estar en línea */
+    .seccionComienzoImagen {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajuste de márgenes y padding en pantallas pequeñas */
+    .seccionComienzo {
+        padding-left: 0;
+        padding-top: 1rem;
+        text-align: center;
+    }
+
+    /* Ajuste del grid en pantallas pequeñas */
+    .seccionGrid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .seccionImagenComienzo img {
+        height: auto;
+        max-width: 90%; /* Controla el tamaño máximo de la imagen en pantallas pequeñas */
+    }
+}

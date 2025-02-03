@@ -1,0 +1,80 @@
+@font-face {
+    font-family: Jost;
+    src: url("../fonts/Jost/Jost-VariableFont_wght.ttf");
+}
+
+* {
+    font-family: Jost;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+/* Variable para elegir colores */
+:root {
+    --beige: rgb(216, 186, 145);
+    --colorfondo: #c0ad8cab;
+    --blanco: rgb(255, 255, 255);
+    --beigeclaro: rgba(198, 176, 143);
+    --marrontitulo: rgb(139, 69, 19);
+}
+footer {
+    background-color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.linea {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.seccionFooter__frase {
+    margin-left: 4rem;
+    margin-right: 3rem;
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer__contenedor {
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos a los extremos */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 0 2rem; /* Añade un poco de espacio a los lados */
+    margin-right: 1rem;
+}
+
+.footer__lista {
+    display: flex;
+    list-style-type: none;
+}
+
+.footer__lista.redes {
+    justify-content: flex-end; /* Mantiene los enlaces a la derecha */
+}
+
+.footer__linkLista {
+    text-decoration: none;
+    font-size: 0.7rem;
+    color: black;
+    margin: 0 1rem; /* Ajusta el margen para un mejor espaciado */
+}
+
+.footer__linkLista:hover {
+    color: var(--beigeclaro);
+}
+
+.footer__imagen {
+    max-width: 100px;
+    height: auto;
+    margin-right: 4rem; /* Ajusta el margen a la derecha para alinear */
+    margin-left: 2rem;
+}

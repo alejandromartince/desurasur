@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ana" />
+    <meta name="keywords" content="bolsos, hechos a manos, casero, materiales, decoración, playa, complementos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | DE SUR A SUR | España</title>
+    <link rel="icon" type="image/x-icon" href="./Imgs/logotipos_web_negro.png" />
+
+    <!-- Links para los archivos JS -->
+    <script src="./BarraNavegacionVertical.js"></script>
+    <script src="./IncluirHeader.js"></script>
+    <script src="./IncluirFooter.js"></script>
+
+    <!-- Link para los archivos de CSS -->
+    <link rel="stylesheet" href="./Contacto.css">
+</head>
+
+<body>
+
+    <header>
+        <div id="header-container"></div>
+    </header>
+
+    <section class="seccionBienvenida">
+        <h1>Atención al cliente</h1>
+        <p>¡Hola! Estamos aquí para ayudarte. Completa los datos a continuación y te responderemos lo antes posible.
+            <br>
+            También puedes escribirnos por Instagram
+        </p>
+    </section>
+
+    <section class="seccion__formulario">
+        <!-- Aquí comienza el formulario -->
+        <form action="./Envio.html" method="post" name="formulario" enctype="application/x-www-form-urlencoded"
+            class="formulario" target="_blank">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Indica tu nombre" maxlength="30" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Indica tu apellido" maxlength="30" required>
+
+            <label for="correo">Correo:</label>
+            <input type="email" name="correo" id="correo" placeholder="ejemplo@gmail.com" maxlength="50" required>
+
+            <label for="descripcion">¿Qué necesitas?</label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Mensaje" maxlength="140"
+                required></textarea>
+
+            <input type="submit" value="Enviar" id="submit">
+        </form>
+
+    </section>
+
+    <!-- Seccion del footer -->
+    <footer>
+        <div id="footer-container"></div>
+    </footer>
+
+</body>
+
+</html>
